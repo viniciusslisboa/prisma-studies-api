@@ -1,0 +1,19 @@
+{
+  "name": "prisma-relation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prisma": "^3.8.1",
+    "sucrase": "^3.20.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.8.1",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2"
+  }
+}
