@@ -16,10 +16,12 @@ model User {
   email     String    @unique
   password  String
   Posts     Post[]
-  Comment   Comment[]
+  Comments  Comment[]
+  Groups    Group[]
   Profile   Profile?
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
+
 
   @@map("users")
 }
@@ -61,4 +63,15 @@ model Comment {
 
 
   @@map("comments")
+}
+
+model Group {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  Members     User[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("groups")
 }

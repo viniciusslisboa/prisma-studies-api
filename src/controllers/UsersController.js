@@ -4,7 +4,11 @@ const prisma = new PrismaClient();
 
 const UsersController = {
   index: async (req, res) => {
-    const users = await prisma.user.findMany({});
+    const users = await prisma.user.findMany({
+      include: {
+        Profile: true,
+      },
+    });
 
     return res.json(users);
   },
